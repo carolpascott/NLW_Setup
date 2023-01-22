@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --bg-color: #1E1E1E;
+    --txt-color: #FFFFFF;
+
+    --bd-box-color: #27272A;
+    --box-color: #18181B;
+    --bd-box-color-selected: #A78BFA;
+    --box-color-selected: #8B5CF6;
+    --bd-button: #8B5CF6;
+
+    --date-color: #A1A1AA;
+
+    --ff-button: 'Inter', sans-serif;
+    --ff-date: 'Roboto Mono', sans-serif;
+
+
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--txt-color);
+
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 4.8rem;
+
+    position: fixed;
+    width: 100%;
+    background-color: var(--bg-color);
+}
+
+button {
+    padding: 1.6rem 2.4rem;
+    border-radius: 8px;
+    border: 1px solid var(--bd-button);
+    background-color: transparent;
+    color: var(--txt-color);
+
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    font-family: var(--ff-button);
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 125%;
+}
+
+#form-habits {
+    display: flex;
+
+    padding: 18.2rem 4.8rem 4.8rem;
+    width: fit-content;
+}
+
+.days {
+    display: flex;
+    gap: 4.8rem;
+
+    margin-left: 3.2rem;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.day div {
+    margin-bottom: .8rem;
+
+    font-family: var(--ff-date);
+    font-size: 2rem;
+    line-height: 125%;
+
+    color: var(--date-color);
+
+    text-align: center;
+}
+
+.habits {
+    margin-top: 5.7rem;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.habit {
+    width: 6.4rem;
+    height: 6.4rem;
+
+    font-size: 3.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 6.4rem;
+    height: 6.4rem;
+
+    border: 2px solid var(--bd-box-color);
+    border-radius: 8px;
+
+    background: var(--box-color);
+}
+
+input:checked {
+    border: 2px solid var(--bd-box-color-selected);    
+    background: var(--box-color-selected);
+}
+
+@media(max-width: 570px) {
+    button div {
+        display: none;
+    }
+}
